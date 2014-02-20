@@ -1,7 +1,7 @@
-cakephp-mongodb-datatable
+CakePHP DataTable Plugin
 =========================
 
-CakePHP DataTable Plugin, geared towards MongoDB Collection
+CakePHP DataTable Plugin, geared towards MongoDB Collection.
 
 Usage:
 

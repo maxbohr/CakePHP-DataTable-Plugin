@@ -1,0 +1,33 @@
+<?php
+
+$config['ModelUser'] = array(
+    'fields' => array(
+        'name' => array(
+            'label' => "Name",
+            'link_format' => '/users/view/ID_VALUE',
+        ),
+        'email' => "Email",
+        'location' => array(
+            'label' => 'Location',
+            'options' =>  array(
+                'DT' => 'Downtown',
+                'NW' => 'Northwest',
+                'DL' => 'Dallas',
+                'MU' => 'Mumbai',
+            ),
+        ),
+    ),
+    // 'order' => array(
+    //     'name' => 'ASC',
+    // ),
+    'datatable_options' => array(
+        'aaSorting' => array(
+            array(1, 'desc')
+        ),
+    ),
+    'search_fields' => array(
+        'name',
+        'email',
+    ),
+);
+
