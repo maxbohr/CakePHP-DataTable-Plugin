@@ -47,6 +47,8 @@ $(document).ready(function() {
                     <?
                         if(is_array($options) && isset($options['label'])):
                             echo $options['label'];
+                        elseif(is_array($options)):
+                            echo Inflector::humanize($field);
                         else:
                             echo $options;
                         endif;
