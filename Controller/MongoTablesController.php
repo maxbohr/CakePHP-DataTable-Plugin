@@ -42,6 +42,11 @@ class MongoTablesController extends DataTableAppController {
             }
         }
 
+        // Global Filter
+        $filters = $this->Session->read("DataTable.Filters.$model");
+        if(!empty($filters)) {
+            $op['conditions'] = array_merge($op['conditions'], $filters);
+        }
 
         $result['iTotalRecords'] = $this->{$model}->find('count',$op);
         $result['iTotalDisplayRecords'] = $result['iTotalRecords'];
